@@ -24,7 +24,8 @@ public class Main {
 
         System.out.println("min = " + returnedMin);
 
-        System.out.println(Arrays.toString(sortIntegers(returnedArray)));
+        System.out.println("Sorted array =" + Arrays.toString(sortIntegers(returnedArray)));
+        System.out.println("Reversed array = " + Arrays.toString(reverseArray(returnedArray)));
 
     }
 
@@ -75,5 +76,15 @@ public class Main {
         }
 
         return sortedArray;
+    }
+
+    public static int[] reverseArray(int[] array) {
+        int[] reversedArray = new int[array.length];
+        int j = 0;
+        for (int i = array.length-1; i>=0; i--) {
+            reversedArray[j] = array[i];
+            j++;
+        }
+        return reversedArray;
     }
 }
